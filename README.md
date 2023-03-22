@@ -1,5 +1,4 @@
-# fake-git-history-python
-Generate Git history by python
+# Generate Git history by python
 
 Python version for [fake-git-history](https://github.com/artiebits/fake-git-history)
 
