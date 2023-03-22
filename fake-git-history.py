@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 
 import subprocess
-import shutil
 import os
 from datetime import datetime, timedelta, date
 import random
@@ -41,17 +40,17 @@ def getDateList(s:date, e:date, w_freq:tuple, d_freq:tuple, workday:bool) -> lis
     return res_list
 
 def make_commit_history(start_date:date, end_date:date, weekly_commit=(1,5), day_commit = (0,3), workday=False):
-    
-    print('make local repository')
+
     dir_name = 'my-history'    
     # check directory
-    if os.path.exists(dir_name):
-        shutil.rmtree(dir_name)
-        
-    os.mkdir(dir_name)
-    os.chdir(dir_name)
-    print('=== Git History Create ===')
-    subprocess.run(["git", "init"])
+    if not os.path.exists(dir_name):       
+        os.mkdir(dir_name)
+        os.chdir(dir_name)
+        print('=== Git History Create ===')
+        subprocess.run(["git", "init"])
+    else:                        
+        print("History directory already exist in", os.path.abspath(dir_name))
+        os.chdir(dir_name)
     print("Creating history...")
     # make datetime list
     date_list = getDateList(start_date, end_date, weekly_commit, day_commit, workday)
