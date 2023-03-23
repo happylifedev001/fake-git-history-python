@@ -7,9 +7,10 @@ Python version for [fake-git-history](https://github.com/artiebits/fake-git-hist
 ```
 python --version
 ```
-2. Choose your working directory and Generate your commits in command prompt:
+2. Choose your working directory and download `fake-git-history.py` file.  
+Generate your commits in command prompt:
 ```
-python fake-git-history
+python fake-git-history.py
 ```
 This command creates a my-history folder, initializes git, and generates commits for every day within the last year.
 
