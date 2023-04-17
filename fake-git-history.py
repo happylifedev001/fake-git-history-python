@@ -73,7 +73,7 @@ if __name__ == "__main__":
     parser.add_argument("-s", "--startDate", default=None, help="start date for git history. default: a year ago from now")
     parser.add_argument("-e", "--endDate", default=None, help="start date for git history. default: a year ago from now")
     parser.add_argument("-w","--weeklyFreq", default='3..5', help="the range of number of days commiting in a week")
-    parser.add_argument("-c","--commitPerDay", default='0..3', help="the range of number of commits per day")
+    parser.add_argument("-c","--commitsPerDay", default='0..3', help="the range of number of commits per day")
     parser.add_argument("-wd", "--workdaysOnly", action="store_true", help="commit in only workdays")
 
     args = parser.parse_args()
